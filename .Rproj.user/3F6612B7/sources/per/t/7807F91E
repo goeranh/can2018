@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541431390260.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2378988604",
+    "id" : "7807F91E",
+    "lastKnownWriteTime" : 1541518456,
+    "last_content_update" : 1541518456750,
+    "path" : "~/R/CAN2019/can2016.Rmd",
+    "project_path" : "can2016.Rmd",
+    "properties" : {
+        "cursorPosition" : "54,70",
+        "scrollLine" : "38"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,5 @@
+"0","jfr <-  if_else(tmp_kom$y16_9_f > tmp_kom$y16_9_p, yes = ""fler"", no = ""färre"")
+"
+"2","Error in if_else(tmp_kom$y16_9_f > tmp_kom$y16_9_p, yes = ""fler"", no = ""färre"") : 
+  unused arguments (yes = ""fler"", no = ""färre"")
+"

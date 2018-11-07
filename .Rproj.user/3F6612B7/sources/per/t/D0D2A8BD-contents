@@ -1,0 +1,103 @@
+---
+title: "CAN 2019 notes"
+output:
+  html_document:
+    df_print: paged
+---
+
+18-11-04
+
+# Utgångspunkter
+
+Ska göras en kortversion av resultaten från CAN 2016 (och 2013 då det är relevant) enligt texten i Alingsås.docx. Tänker att i första hand använda befintliga resultat för kortversionerna (ResultatKortvers2013_16.xlsx).
+
+## Arbetsfiler
+Följande arbetsfiler finns i data:
+
+```{r}
+dir("./data")
+```
+
+
+Excelfilen är uppdelad på 11 frågeområden, ett område per flik.
+
+```{r }
+library(readxl)
+
+sheet_list = excel_sheets("data/ResultatKortvers2013_16.xlsx")
+sheet_list
+```
+
+Varje flik innehåller kommuner + VGR (raderna 3-51 resp rad 52) och utfall åk 9 2013 och 2016 samt gy 2 2013 och 2016. 
+
+Av integritetsskäl görs inte könsuppdelning för vissa kommuner/frågeområden, detta framgår av kolumnen "Redovisningsnivå 2016", flik 1, kolumn I.
+
+Tänker att jobba enl följande:
+
+1. Lägg upp ett arbetsmanus (Markdown) baserad på *Alingsås.docx*.
+2. Lägg in önskade figurer enligt texten.
+3. Skapa en kommunnamnsfil i Excel som underlag för att generera ett output per kommun. Ska också innehålla kontaktinfo.
+4. Arbeta med kod.
+
+## Arbetsmanus
+Kopierar wordfilen till `can2016.Rmd`.
+Fixar figurplaveringar, får avgöras definitivt då vi kikar på data.
+
+## Kommunnamnsfil
+Skapat `kommunnycklar.xlsx`. Innehåller f.n. endast kommunnamn men bör kompletteras med kommunalförb (kf), hosjv-nämnd (hsn) samt kontaktinfo (kontaktperson, titel, epost + telefon).
+
+```{r komid}
+komid <- read_excel("data/kommunnycklar.xlsx")
+```
+
+# Kod
+
+## Skapa kommunspecifika data
+
+Först filtreras data per kommun för åk 9, gy 2, könsuppdelat och info om redovisningen ska vara könsuppdelat.
+
+Börjar med att få fram antalet deltagande elever.
+
+```{r}
+library(tidyverse)
+
+# redovisad kommun
+
+studkom = "Partille"
+
+tmp_antal = read_excel("data/ResultatKortvers2013_16.xlsx", sheet = 1, range = "A3:R53", 
+                 col_names = c("kommun1", "y13_9_tot", "y13_9_p", "y13_9_f",
+                              "kommun2", "y16_9_tot", "y16_9_p", "y16_9_f", "redovis",
+                              "kommun3", "y13_2_tot", "y13_2_p", "y13_2_f",
+                              "kommun4", "y16_2_tot", "y16_2_p", "y16_2_f", "redovis2"),
+                 trim_ws = TRUE) %>% 
+  mutate(kommun1 = str_trim(kommun1, side = "both"),
+         kommun2 = str_trim(kommun2, side = "both"),
+         kommun3 = str_trim(kommun3, side = "both"),
+         kommun4 = str_trim(kommun4, side = "both"))
+
+tmp_kom <- tmp_antal %>% 
+  filter(kommun1 == studkom)
+
+```
+
+Testar om antalsuppgifter fungerar:
+
+"år 2016 deltog från `r studkom` `r tmp_kom$y16_9_tot`, varav `r tmp_kom$y16_9_p` pojkar och `r tmp_kom$y16_9_f` flickor."
+
+OBS: Noterar att summeringarna inte stämmer!! KOLLA!
+
+## Radnummer i komid som id för att välja kommun
+Prövar att använda radnumret i kommunnyckelfilen som id för kommun. Tanken är att på sikt göra en funktion  som ietererar igenom de 49 kommunerna för att slippa skriva in kommun för kommun.
+
+```{r}
+studkom <- str_trim(komid$Hemkommun[3], side = "both")
+studkom
+
+```
+
+## 2018-11-06
+
+# Arbeta med kod
+
+Börjar att koda `can2016.Rmd`.

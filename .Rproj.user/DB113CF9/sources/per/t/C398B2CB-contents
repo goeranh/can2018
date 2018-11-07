@@ -1,0 +1,120 @@
+---
+title: "Drogvanor bland ungdomar enligt CAN 2016"
+author: "Göran Henriksson"
+date: "5 november 2018"
+output: html_document
+---
+
+
+
+
+```{r studkom, echo=FALSE}
+library(tidyverse)
+library(readxl)
+
+studkom = "Härryda"
+
+```
+
+
+Under våren 2016 genomfördes en undersökning om elevers drogvanor i årskurs 9 och år 2 på gymnasiet. Undersökningen gjordes av Centralförbundet för alkohol- och narkotikaupplysning (CAN) i samarbete med kommunerna och Västra Götalandsregionen. 
+
+```{r antal}
+tmp = read_excel("data/ResultatKortvers2013_16.xlsx", sheet = 1, range = "A3:R53", 
+                 col_names = c("kommun1", "y13_9_tot", "y13_9_p", "y13_9_f",
+                              "kommun2", "y16_9_tot", "y16_9_p", "y16_9_f", "redovis",
+                              "kommun3", "y13_2_tot", "y13_2_p", "y13_2_f",
+                              "kommun4", "y16_2_tot", "y16_2_p", "y16_2_f", "redovis2"))
+
+
+```
+
+Antalet medverkande ungdomar folkbokförda i Alingsås kommun var 327 i årskurs 9 och 277 studerande år 2 på gymnasiet. I denna text benämns ungdomarna som 15-åringar respektive 17-åringar. 
+
+# Hälsa
+I Alingsås är det färre flickor än pojkar som uppger att de är nöjda med sin hälsa i båda åldersgrupperna. Genomsnittet i Alingsås är lägre än i Västra Götaland. 
+
+# Tobak 
+
+## Rökning
+I Västra Götaland ses en nedåtgående trend gällande andelen rökande ungdomar i båda åldersgrupperna. I Alingsås är det större andel flickor än pojkar som uppger att de röker. 
+
+## Snus
+Andelen snusande 15-åringar boende i Alingsås är 8%, medan det är 19% utav 17-åringarna som uppger att de snusar. Dessa siffror ligger över genomsnittet i Västra Götaland, 6% respektive 15%. 
+
+# Alkohol
+
+Bland Alingsås 15-åringar uppger 43% att de druckit alkohol någon gång de senaste 12 månaderna, medan bland 17-årigarna är det 77%  om uppger att de druckit alkohol. Dessa siffror är något högre än genomsnittet i Västra Götaland. I både åldersgrupperna i Alingsås är det fler flickor än pojkar som uppger att de druckit alkohol. 
+
+## Intensivkonsumtion
+Ifrån föregående undersökning har det skett en minskning i båda åldersgrupperna utav de ungdomar som uppger att de intensivkonsumerar alkohol. Andelen 15- och 17 åringar som intensivkonsumerar alkohol är lägre i Alingsås än genomsnittet i Västra Götaland.  
+
+## Bjudvanor
+Av 15-åringar från Alingsås är det 24% som  blivit bjudna på alkohol av sina föräldrar, medan bland 17-åringar i Alingsås är det 39%. Intensivkonsumtion av alkohol är vanligare bland ungdomar som av sina 
+föräldrar blivit bjudna på alkohol
+
+## Negativa konsekvenser av alkohol
+Både flickor och pojkar uppger att de fått problem efter att de druckit alkohol. De har fått kläder och saker förstörda, råkat ut för olyckor och problem med relationer till föräldrar, vänner och lärare samt presterat sämre i skolan. Eleverna har också råkat ut för sexuella och brottsrelaterade problem.
+
+# Narkotika
+Narkotikaanvändningen i båda åldersgrupperna är lägre än genomsnittet i Västra Götaland. Det har även skett en minskning utav narkotikaanvändandet främst bland Alingsås 17-åringar.  
+
+#Var får eleverna tag på drogerna?
+Vid undersökningen var de flesta av gymnasieeleverna icke myndiga. Ändå får många tag på tobak, alkohol och narkotika.
+Tobak köper de flesta själva eller genom kompisar. Alkohol får de tag på genom kompisar, kompisars syskon eller andra
+vuxna, men också i olika omfattning genom sina egna föräldrar. Var femte utav Alingsås 17-åringar har en eller flera
+gånger blivit serverad alkohol på restaurang/pub i Sverigeföre sin 18-årsdag. Statistiken visar att ungdomars möjligheter att få tag på narkotiska preparat har ökat. Cannabis är det i särklass 
+vanligaste narkotikapreparatet bland ungdomar.
+
+#Skoltrivsel
+De flesta eleverna i undersökningen uppger att de trivs i skolan. 
+Drygt 82% av ungdomarna i Alingsås uppger att de trivs ganska- eller mycket bra i skolan. 
+
+#Skolk 
+Det är en något större andel utav 17-åringarna som skolkar än utav 15-åringarna, detta gäller för både pojkar och flickor. I båda grupperna är genomsnittet i Allingsås motsvarande genomsnittet i Västra Götaland. Bland elever som skolkar är det betydligt vanligare med intensivkonsumtion av alkohol och droganvändning.
+
+#Risk- och skyddsfaktorer
+Genom forskning vet vi att det finns olika förhållanden och faktorer som påverkar unga i positiv riktning, eller till motsatsen, ett riskbeteende. En eller några enstaka negativa faktorer behöver inte innebära någon större fara, men ju fler riskfaktorer, desto större är sannolikheten för ett riskbeteende.
+
+Faktorerna kan kopplas till flera nivåer; på individnivå, familjen, kamrater, skolan och samhällsnivå.
+
+Vuxenvärlden har stor påverkan på eleverna. Få eller inga gränssättningar och dålig kommunikation mellan elev och
+vuxna bidar till att eleverna konsumerar mer alkohol och tobak än elever som ges tydliga gränser.
+
+Alkohol- och tobakskonsumtion är märkbart större hos
+elever som:
+
+• blir bjudna på alkohol hemma
+• har en eller flera i familjen som använder tobak
+• har föräldrar som säger att det är okej att dricka alkohol,
+röka cigaretter och snusa
+• inte är nöjda med förhållandet till familjen
+• inte trivs i skolan och skolkar ett par gånger i månaden
+eller oftare
+• har svårt att prata med andra vuxna och kamrater om
+problem
+• har föräldrar som inte vet vad sonen eller dottern gör på
+fredags- och lördagskvällar.
+
+#Hur kan skolan förebygga? 
+
+* Genom att skapa ett gott skolklimat och samverka med  
+elevernas föräldrar, har skolan goda möjlighet att påverka
+ungdomarnas alkoholkonsumtion.
+* Gott skolklimat och engagerade föräldrar har även visat 
+sig bidra till att elevernas skolprestationer förbättras. 
+* Elever som trivs och fungerar väl i skolan löper mindre risk att
+utveckla olika typer av problem och drogmissbruk.
+* En god lärandemiljö och ett gott klimat i skolan förstärker
+varandra.
+
+#Kontakt
+Håkan Fransson, drogförebyggande samordnare
+
+E-post: hakan.fransson@alingsås.se
+
+Tfn: 0706- 901514
+
+
+
+

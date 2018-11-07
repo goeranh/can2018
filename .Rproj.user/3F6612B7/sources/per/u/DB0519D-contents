@@ -1,0 +1,13 @@
+
+tmp = read_excel("data/ResultatKortvers2013_16.xlsx", sheet = 1, range = "A3:R53", 
+                 col_names = c("kommun1", "y13_9_tot", "y13_9_p", "y13_9_f",
+                               "kommun2", "y16_9_tot", "y16_9_p", "y16_9_f", "redovis",
+                               "kommun3", "y13_2_tot", "y13_2_p", "y13_2_f",
+                               "kommun4", "y16_2_tot", "y16_2_p", "y16_2_f", "redovis2"),
+                 trim_ws = TRUE) %>% 
+#  tmp_antal <- tmp_antal %>% 
+    mutate(kommun1 = str_trim(kommun1, side = "both"),
+           kommun2 = str_trim(kommun2, side = "both"),
+           kommun3 = str_trim(kommun3, side = "both"),
+           kommun4 = str_trim(kommun4, side = "both"))
+dir("./data")  

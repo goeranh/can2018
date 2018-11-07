@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541410179307.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "736187037",
+    "id" : "72C1E427",
+    "lastKnownWriteTime" : 1541413985,
+    "last_content_update" : 1541413985163,
+    "path" : "C:/Users/gorhe2/OneDrive – Västra Götalandsregionen/DataOchAnalys/R/CAN2019/can2019.Rmd",
+    "project_path" : "can2019.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "36,0",
+        "scrollLine" : "13",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

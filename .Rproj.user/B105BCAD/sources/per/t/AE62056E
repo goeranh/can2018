@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541526200197.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AE62056E",
+    "lastKnownWriteTime" : 8101238457489517929,
+    "last_content_update" : 1541526200197,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "40D85665",
+        "caption" : "tmp_kom",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=tmp_kom&cache_key=40D85665",
+        "displayedObservations" : "1",
+        "environment" : "",
+        "expression" : "tmp_kom",
+        "object" : "tmp_kom",
+        "preview" : "0",
+        "totalObservations" : "1",
+        "variables" : "18"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

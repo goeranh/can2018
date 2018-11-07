@@ -1,0 +1,4 @@
+"0","komid <- read_excel(""data/kommunnycklar.xlsx"")"
+"2","Error in read_excel(""data/kommunnycklar.xlsx"") : 
+  could not find function ""read_excel""
+"

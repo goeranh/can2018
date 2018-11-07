@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541432391204.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F611A059",
+    "lastKnownWriteTime" : 7596850652370313838,
+    "last_content_update" : 1541432391204,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "27F44069",
+        "caption" : "komid",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=komid&cache_key=27F44069",
+        "displayedObservations" : "50",
+        "environment" : "",
+        "expression" : "komid",
+        "object" : "komid",
+        "preview" : "0",
+        "totalObservations" : "50",
+        "variables" : "7"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
